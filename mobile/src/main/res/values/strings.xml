@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BG World</string>
+    <string name="login_screen">Sign in</string>
+    <string name="facebook_app_id">247209649110725</string>
+    <string name="facebook_login">Login with Facebook</string>
+    <string name="ludopedia_login">Login with Ludopedia</string>
+</resources>

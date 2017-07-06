@@ -20,11 +20,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item?.itemId) {
-            android.R.id.home -> {
+        if (mDrawerToggle.onOptionsItemSelected(item)) return true
 
-            }
-        }
         return super.onOptionsItemSelected(item)
     }
 }

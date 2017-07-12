@@ -3,5 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorLightGray">#ECECEC</color>
+    <color name="colorSunshine">#F9BA32</color>
+    <color name="colorSteelBlue">#426E86</color>
+    <color name="colorBone">#F8F1E5</color>
+    <color name="colorCoal">#2F3131</color>
+    <color name="colorCoalDark">#2A2C2C</color>
 </resources>

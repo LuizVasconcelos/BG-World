@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.AnimationUtils
+import android.view.animation.TranslateAnimation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_navigation_drawer.*
 
@@ -12,6 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     val mDrawerToggle by lazy { android.support.v7.app.ActionBarDrawerToggle(this,navigationDrawer, 0,0) }
     var isFABOpened = false
+
+    //var translatorFAB1 by lazy {TranslateAnimation(0,0,0,0)}
+    //var translatorFAB2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +27,9 @@ class MainActivity : AppCompatActivity() {
         val mainFABOpenAnimation = AnimationUtils.loadAnimation(this.applicationContext,R.anim.rotate_foward)
         val mainFABCloseAnimation = AnimationUtils.loadAnimation(this.applicationContext,R.anim.rotate_backward)
 
-        this.mainScreenFAB.setOnClickListener(object : View.OnClickListener {
+
+
+        this.mainScreenFAB.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View?) {
                 if(!isFABOpened) {
                     mainScreenFAB.startAnimation(mainFABOpenAnimation)
@@ -41,6 +47,13 @@ class MainActivity : AppCompatActivity() {
         if (mDrawerToggle.onOptionsItemSelected(item)) return true
 
         return super.onOptionsItemSelected(item)
+    }
+
+    fun prepareFABsTranslateAnimation() {
+        var mainFABoriginalPos = IntArray(2)
+        mainScreenFAB.getLocationOnScreen(mainFABoriginalPos)
+
+
     }
 
 }
